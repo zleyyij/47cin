@@ -1,0 +1,29 @@
+
+
+:root, :root[data-theme="british-racing"] {
+    --bg: #02170dff;
+    --fg: #f5efe3;
+    --fg-subdued: #bdbdb7ff;
+    --primary-accent: #a89359ff;
+    --page-width: 980px;
+    /* --primary-font: 'Helvetica', sans-serif; */
+    --primary-font: 'Georgia';
+    --secondary-font: 'Montserrat', sans-serif;
+}
+
+
+/* --- FONTS --- */
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url('/fonts/Fira_Sans/FiraSans-Regular.ttf') format('truetype');
+}

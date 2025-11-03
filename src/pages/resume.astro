@@ -1,0 +1,479 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+    <div class="resume-container">
+        <!-- HEADER -->
+        <section class="resume-header">
+            <div>
+                <h1>James Boehme</h1>
+                <h3>Résumé</h3>
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        <a href="mailto:jboehme05@gmail.com">jboehme05@gmail.com</a>
+                    </td>
+                    <th>
+                    Email
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="tel:+14352588669">+1 (435) 258-8669</a>
+                    </td>
+                    <th>
+                        Cell
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://47c.in">www.47c.in</a>
+                    </td>
+                    <th>
+                        Site
+                    </th>
+                </tr>
+            </table>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="category skills">
+            <h2>Skills</h2>
+            <hr />
+            <div>
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>
+                        <h4><em>Rust</em></h4>
+                        <blockquote>
+                            Moderate contributions
+                            to large Rust projects, including crates relied on by the Rust compiler.
+                            I have used Rust for backend web development, zero copy parsing, and systems programming,
+                            and maintain several actively used Rust projects that I helped start.
+                        </blockquote>
+                    </li>
+                    <li>
+                        <h4><em>Typescript | Javascript</em></h4>
+                        <blockquote>
+                            Used Typescript for large backend and frontend projects. I can write secure,
+                            idiomatic, maintainable, and performant Typescript code.
+                            My Typescript experience also includes framework experience with Svelte, and Astro. 
+                        </blockquote>
+                    </li>
+                    <li>
+                        <h4><em>Other</em></h4>
+                        <blockquote>
+                            Comfortable writing Python, C/C++, C#, and Java.
+                            I am committed to continually adapting and growing, and would
+                            love the opportunity to learn and grow with new langauges.
+                        </blockquote>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3>DevOps | Tooling</h3>
+                <ul>
+                    <li>
+                        <h4><em>Git</em></h4>
+                        <blockquote>
+                            Experience using Git for projects of all sizes.
+                            I have practice with conventional commits, and am
+                            comfortable working with version control for large projects.
+                        </blockquote>
+                    </li>
+                    <li>
+                        <h4><em>CI|CD</em></h4>
+                        <blockquote>
+                            Created Github Actions that provide linting and automatic deployment
+                            of a variety of projects. Experience utilizing caching and
+                            dynamic workflows to reduce CI times. 
+                        </blockquote>
+                    <li>
+                        <h4><em>Containerization</em></h4>
+                        <blockquote>
+                            Experience developing and deploying projects with Docker/Docker Compose. My homelab
+                            is built on top of Docker and Hashicorp Nomad.
+                        </blockquote>
+                    </li>
+                    <li>
+                        <h4><em>Linux</em></h4>
+                        <blockquote>
+                            Completed <a href="https://www.linuxfromscratch.org/" target="_blank">Linux From Scratch</a>. Experience with
+                            XCP-NG/Xen Orchestra, coreutils, and systemd. I am comfortable deploying, administering, and securing
+                            a Linux system.
+                        </blockquote>
+                    </li>
+                    
+                </ul>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="category">
+            <h2>Founded Projects</h2>
+            <hr />
+            <ul>
+                <li>
+                    <h3><a href="https://github.com/spec-ify/specify" target="_blank">Spec-ify</a> - Computer info aggregator and viewer</h3>
+                    <blockquote>
+                        Developed  as a better replacement for Piriform's <a target="_blank" href="https://www.ccleaner.com/speccy">Speccy</a>,
+                        I contributed heavily to the C# client, PHP/Svelte web viewer, and more recently the Rust backend.
+                        As a developer and project lead, I learned from professional developers and gained experience working as a team.
+                        Spec-ify is utilized by several volunteer techsupport communities.
+                    </blockquote>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/r-Techsupport/hyde" target="_blank">Hyde</a> - Web editor and CMS for Markdown based static sites</h3>
+                    <blockquote>
+                        Hyde was developed from the ground up as a full stack application to lower the barrier to entry for Jekyll/Astro websites.
+                        I architected this project making use of Hexagonal Architecture, and Hyde with a Rust/SQLite backend with a Svelte frontend.
+                        I gained a deeper knowledge of Git internals and building scalable software in doing so. Hyde is a critical tool for the maintainers
+                        of the <a href="https://rtech.support/" target="_blank">rtech.support</a> knowledgebase.
+                    </blockquote>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/spec-ify/hwapi">HWAPI</a> - Hardware Database</h3>
+                    <blockquote>
+                        This project was developed to add functionality to Specify.
+                        It is composed of zero-copy Pratt parsers, a caching layer,
+                        and a public API.
+                        It helped me understand the process of developing parsers,
+                        and demonstrates my understanding of the telemetry ecosystem.
+                        In HWAPI I integrated OpenTelemetry tracing support and
+                        deployed and configured a telemetry stack composed of Grafana,
+                        Loki, Tempo, and an OTLP Collector orchestrated with Hashicorp Nomad.
+                    </blockquote>
+                </li>
+            </ul>
+
+        </section>
+        <!-- CONTRIBUTIONS -->
+        <section class="category contributions">
+            <h2>Open Source Contributions</h2>
+            <hr />
+            <ul>
+                <li>
+                    <h3><a>zstd-rs - foundational work</a></h3>
+                    <blockquote>
+                        zstd-rs is the only pure Rust implementation of the zstandard compression algorithm.
+                        I wrote the core infrastructure for the compressor, as well as unit tests,
+                        fuzzing, and integration testing for the compressor. I also added
+                        support for dictionary generation, and my implementation benchmarked within 0.5%
+                        of Facebook's. Other noteworthy contributions include significant codebase refactoring and documentation improvements.
+                    </blockquote>
+                </li>
+                <li>
+                    <h3><a>Axum - multipart forms</a></h3>
+                    <blockquote>
+                        Axum is the largest web framework in the Rust ecosystem, and is 
+                        relied on by <a href="https://azure.microsoft.com/en-us/products/machine-learning">Azure ML</a>, <a href="https://crates.io">crates.io</a>, <a href="https://reddit.com">reddit.com</a>, <a href="https://lichess.org">lichess</a>, and more.
+                        I added multipart form integration to Axum. Doing so involved
+                        using test driven development to implement a portion of the HTTP specification from scratch
+                        in a reliable and performant manner. My PR was held to stringent standards and I gained valuable feedback
+                        from project maintainers.
+                    </blockquote>
+                </li>
+                <li>
+                    <h3><br></h3>
+                    <blockquote>
+                        More contributions can be found on my
+                        <a href="https://github.com/zleyyij">Github profile</a>.
+                    </blockquote>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="category education">
+            <h2>Education</h2>
+            <hr />
+            <ul>
+                <li>
+                    <h3><strong>Utah State University</strong>, Logan UT (Current)</h3>
+                    <h4>Computer Engineering Bachelors - With Honors<br>
+                        Fall 2024 - Spring 2029 (estimated)
+                    </h4>
+                    <p>I am attending USU full time working towards a bachelors in Computer Engineering. I entered
+                        USU with over 25 concurrent enrollment credits, and maintain above a 3.8GPA. I am currently
+                        enrolled in the USU Honors Program and have pursued undergraduate research.
+                    </p>
+                </li>
+                <li>
+                    <h3><strong>Bridgerland Technical College</strong>, Logan UT</h3>
+                    <h4>Information Technology<br>
+                        Fall 2020 - Spring 2024
+                    </h4>
+                    <p>
+                        I graduated from BTECH's Information Technology program with a 4.0 GPA, and
+                        won or placed top 3 in every hackathon they hosted. In attending this program,
+                        I developed my knowledge of hardware, software, networking, and cybersecurity.
+                    </p>
+                </li>
+                <li>
+                    <h3><strong>Ridgeline High School</strong>, Logan UT</h3>
+                    <h4>Fall 2020 - Spring 2024
+                    </h4>
+                    <p>
+                        I graduated from Ridgeline High School in the summer of 2024 with a 3.9+ GPA.
+                        At Ridgeline I took the opportunity to take multiple AP and concurrent enrollment courses, passing
+                        all college level courses with highest possible grade.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- WORK HISTORY -->
+        <section class="category work-history">
+            <h2>Work History</h2>
+            <hr />
+
+            <ul>
+                <li>
+                    <h3><strong>Innovation Hub Lab Manager</strong> — <em>Utah State University</em></h3>
+                    <h4>July 2024 - Current</h4>
+                    <p>
+                        I started at USU as a computer lab consultant before rapidly being promoted to Innovation Hub Manager.
+                        Working as a lab manager involves ensuring reliable operation of technology and facilities.
+                        The Innovation Hub contains a wide variety of technology, from VR headsets to 3D printers, and I have
+                        increased 3D printer reliability, and made bleeding edge technology accessible to
+                        the students and faculty at USU. Other responsibilities included
+                        customer service, giving tours, and guiding the future of the Innovation Hub.
+                        Working here has enabled me to adapt more easily to new challenges and environments.
+                    </p>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="category certifications">
+            <h2>Certifications</h2>
+            <hr />
+            <ul>
+                <li>
+                    Information Technology - Bridgerland Technical College
+                </li>
+                <li>
+                    Comptia PC Pro
+                </li>
+                <li>
+                    Comptia Network Pro
+                </li>
+                <li>
+                    Comptia Security Pro
+                </li>
+            </ul>
+        </section>
+        <section class="category awards">
+            <h2>Awards</h2>
+            <hr />
+            <ul>
+                <li>Eagle Scout</li>
+                <li>Competition Winner, 2024 Bridgerland Technical College Hackathon</li>
+                <li>Third Place, 2020 Thermo Fisher Scientific Junior Innovators Challenge</li>
+            </ul>
+        </section>
+
+    </div>
+</Layout>
+
+<style>
+    :root {
+        --bq-spacing: 0.2rem;
+    }
+
+    /* --- Container --- */
+    .resume-container {
+        margin-top: 2rem;
+        max-width: var(--page-width);
+        margin-left: auto;
+        margin-right: auto; 
+        margin-bottom: 3rem;
+    }
+
+    a {
+        color: var(--fg);
+        text-decoration: underline;
+    }
+
+    a:hover {
+        color: var(--fg-subdued);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* --- Header --- */
+    .resume-header {
+        display: flex;
+        margin-bottom: 0.5rem;
+    }
+
+    .resume-header h1 {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+
+    .resume-header h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 1rem;
+        font-weight: 100;
+        align-self: flex-end;
+        color: var(--fg-subdued);
+    }
+
+    .resume-header table {
+        font-family: var(--secondary-font);
+        margin-left: auto;
+        margin-top: auto;
+        height: 2.5rem;
+        font-size: 0.5rem;
+        display: flex;
+    }
+
+    .resume-header a {
+        /* color: #f2cd82; */
+        color: var(--fg)
+        float: right;
+    }
+
+    .resume-header th {
+        float: left;
+        padding-left: 0.2rem;
+        color: var(--fg-subdued);
+    }
+
+    /* --- Categories --- */
+    .category h2 {
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 0;
+        width: 100%;
+        font-style: italic;
+    }
+
+    .category h3 {
+        font-weight: 600;
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    .category hr {
+        width: 100%;
+        margin-top: 0;
+        color: var(--fg-subdued);
+        border-color: var(--fg-subdued);
+    }
+
+    .category ul {
+        margin: 0;
+        padding-left: 0.1rem;
+        list-style-type: none;
+    }
+
+    .category li {
+        font-size: 0.6rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .category blockquote {
+        margin: var(--bq-spacing);
+        margin-top: calc(--bq-spacing / 5);
+        font-size: 0.6rem;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .skills h2 {
+        flex-shrink: 0;
+    }
+
+    .skills h4 {
+        margin-bottom: 0;
+        margin-top: 0.1rem;
+        font-weight: 200;
+        font-size: 0.75rem;
+    }
+
+    .skills div {
+        margin-left: 0.1rem;
+        margin-right: 0.4rem;
+        max-width: 45%;
+    }
+
+    .education h3 {
+        font-weight: 300;
+    }
+
+    .education h3 > strong {
+        font-weight: 600;
+    }
+
+    .education h4 {
+        margin: 0;
+        margin-left: calc(var(--bq-spacing)/ 2);
+        font-weight: 300;
+        font-size: 0.45rem;
+        color: var(--fg-subdued);
+        font-family: var(--secondary-font);
+    }
+
+    .education p {
+        font-size: 0.6rem;
+        margin: calc(var(--bq-spacing));
+        margin-top: 0.04rem;
+    }
+
+    .work-history h3 {
+        font-weight: 300;
+    }
+
+    .work-history h3 strong {
+        font-weight: 600;
+    }
+
+    .work-history h4 {
+        margin: 0;
+        margin-left: calc(var(--bq-spacing) / 2);
+        font-weight: 300;
+        font-size: 0.45rem;
+        color: var(--fg-subdued);
+        font-family: var(--secondary-font);
+    }
+
+    .work-history p {
+        margin: var(--bq-spacing);
+        margin-top: calc(var(--bq-spacing) / 5);
+    }
+
+    .certifications li {
+        margin-left: var(--bq-spacing);
+        font-style: italic;
+    }
+
+    .awards li {
+        margin-left: var(--bq-spacing);
+        font-style: italic;
+        margin-bottom: calc(var(--bq-spacing));
+        margin-top: 0; 
+        padding: 0;
+    }
+
+</style>

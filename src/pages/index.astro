@@ -1,11 +1,132 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+interface Link {
+  title: string;
+  caption: string;
+  url: string;
+}
+
+const links: Link[] = [
+  {
+    title: "Spec-ify",
+    caption:
+      "Generate a sharable hardware/software report of any Windows device.",
+    url: "https://spec-ify.com",
+  },
+  {
+    title: "Notes",
+    caption: "My personal notes, made open source.",
+    url: "https://git.47c.in/arc/notes",
+  },
+  {
+    title: "HWGV",
+    caption: "Analyze HWiNFO log files from the web.",
+    url: "https://hwgv.rtech.support"
+  },
+  {
+    title: "Hyde",
+    caption: "Edit the r/TechSupport knowledge database from the web.",
+    url: "https://hyde.rtech.support"
+  }
+];
 ---
 
 <Layout>
-	<Welcome />
+  <section class="about-me">
+    <h1>About Me</h1>
+    <p>
+      Hi there! My name is James Boehme and I'm a software developer with a passion for building high
+      quality, performant software. I'm presently an undergraduate student at
+      Utah State University studying computer engineering. Current and past
+      areas of interest include information theory, compression, and programming
+      language architecture. I love learning about anything and everything, and
+      I'm driven to improve myself and the world around me.
+    </p>
+
+    <p class="about-me">
+      In my free time, I enjoy photography, yoga, reading, and playing the
+      piano. You can contact me via email at <a href="mailto:jboehme05@gmail.com"><u>jboehme05@gmail.com</u></a>.
+    </p>
+  </section>
+  <section class="external-links">
+    <h1>External Links</h1>
+    {
+      links.map((link) => (
+        <a href={link.url}>
+            <span>
+            <h2>{link.title}</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" height="0.6rem" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>
+            </span>
+            <p>{link.caption}</p>
+        </a>
+      ))
+    }
+  </section>
 </Layout>
+
+<style>
+  h1 {
+    font-weight: 540;
+    font-family: var(--secondary-font);
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+    margin: 0.5rem;
+    border-bottom: 1px solid;
+  }
+
+  p {
+    margin: 0.8rem;
+    margin-top: 0.4rem;
+    font-family: var(--secondary-font);
+    font-size: 0.6rem;
+  }
+
+  .about-me a {
+    color: var(--fg);
+  }
+
+  .about-me a:hover {
+    color: var(--fg-subdued);
+  }
+
+  .external-links a {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.3rem;
+  }
+
+  .external-links a:hover {
+    color: var(--fg-subdued) !important !important;
+  }
+
+  .external-links h2 {
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+    font-weight: 520;
+    margin-bottom: 0;
+    font-family: var(--secondary-font);
+    color: var(--fg);
+  }
+
+  .external-links span {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .external-links svg {
+    fill: var(--fg-subdued);
+    align-self: flex-end;
+    padding-bottom: 0.09rem;
+  }
+
+  .external-links p {
+    margin: 0;
+    font-size: 0.5rem;
+    font-family: var(--secondary-font);
+    color: color-mix(in srgb, var(--fg-subdued) 50%, var(--fg) 50%);
+    margin: 0;
+  }
+
+</style>
