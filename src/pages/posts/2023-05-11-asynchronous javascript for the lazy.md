@@ -1,6 +1,6 @@
 ---
 layout: '../../layouts/BlogPost.astro'
-title: "asynchronous javascript for the lazy"
+title: "Asynchronous Javascript for the lazy"
 date:  2023-05-11
 ---
 

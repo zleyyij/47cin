@@ -1,6 +1,6 @@
 ---
 layout: '../../layouts/BlogPost.astro'
-title: "so you're looking for a project"
+title: "So you're looking for a project"
 date: 2023-06-05
 ---
 

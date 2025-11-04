@@ -1,6 +1,6 @@
 ---
 layout: '../../layouts/BlogPost.astro'
-title: "the evolution of version control"
+title: "The evolution of version control"
 date:  2024-07-23
 ---
 
