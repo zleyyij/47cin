@@ -11,9 +11,6 @@ import "../styles/themes.css";
     <link rel="icon" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>47c.In(c)</title>
-
-    <!-- TEMP -->
-
   </head>
   <nav>
     <span class="left-nav">
@@ -135,6 +132,18 @@ import "../styles/themes.css";
     padding-bottom: 1rem;
 		font-size: 0.4rem;
 	}
+
+    /* Print settings */
+    @media print {
+        :global(nav, footer) {
+            display: none !important;
+        }
+
+        :global(:root) {
+          --fg: black !important;
+          --fg-subdued: #444444 !important;
+        }
+    }
   </style>
 
 
