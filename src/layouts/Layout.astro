@@ -49,9 +49,34 @@ import "../styles/themes.css";
 	<p>This website was created without the use of AI. Any work on this page is original work of the author.</p>
   </footer>
   <style>
+    /* Mobile */
+    @media only screen and (max-width: 500px) { 
+      html {
+        font-size: 2rem !important;
+      }
+    }
+
+    /* Desktop */
+    @media only screen and (min-width: 501px) {
+      html {
+        font-size: 2rem;
+      }
+    }
+
+    /* Print settings */
+    @media print {
+        :global(nav, footer) {
+            display: none !important;
+        }
+
+        :global(:root) {
+          --fg: black !important;
+          --fg-subdued: #444444 !important;
+        }
+    }
+
     html {
       font-family: var(--primary-font);
-      font-size: 2rem;
       background-color: var(--bg);
       color: var(--fg);
       margin: 0;
@@ -132,19 +157,5 @@ import "../styles/themes.css";
     padding-bottom: 1rem;
 		font-size: 0.4rem;
 	}
-
-    /* Print settings */
-    @media print {
-        :global(nav, footer) {
-            display: none !important;
-        }
-
-        :global(:root) {
-          --fg: black !important;
-          --fg-subdued: #444444 !important;
-        }
-    }
   </style>
-
-
 </html>

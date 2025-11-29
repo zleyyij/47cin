@@ -8,69 +8,102 @@ const { frontmatter } = Astro.props;
         <h1 class="article-title">{frontmatter.title}</h1>
         <hr>
         <slot></slot>
-    </div>"
+    </div>
 </Layout>
 
 <style>
-  .content {
-    max-width: var(--page-width);
-    margin: auto;
-    padding: 0.4rem;
-  }
-
+    
   .article-title {
     font-size: 1.4rem !important;
     font-style: italic;
   }
 
   :global(*) .content {
-    p, li {
-        font-family: "Inter";
-        font-size: 0.6rem;
-    }
-
-    a {
-        color: var(--fg-color);
-        text-decoration: underline;
-    }
-
-    a:hover {
-        color: var(--fg-subdued);
-        cursor: pointer;
-    }
-
-    blockquote {
-        color: var(--fg-subdued);
-        border-radius: 2px;
-        border-left: 4px solid var(--fg-subdued);
-        margin-left: 0;
-        padding-left: 1rem;
-    }
-
-    pre {
-        font-size: 0.6rem;
+        max-width: var(--page-width);
+        margin: auto;
         padding: 0.4rem;
-        border-radius: 5px;;
-    }
 
-    pre::-webkit-scrollbar {
-        display: none;
-    }
+        p {
+            font-family: "Inter";
+            font-size: 0.6rem;
+            margin: 0.3rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            line-height: 1.74;
+        }
 
-    h1 {
-        font-size: 1.1rem;
-        margin: 0.2rem;
-    }
+        ul, ol {
+            margin-top: -0.8rem;
+        }
 
-    h2 {
-        font-size: 0.9rem;
-        margin: 0.25rem;
-    }
+        li {
+            font-family: "Inter";
+            font-size: 0.6rem;
+            line-height: 1.64;
+        }
 
-    hr {
-        fill: var(--fg-subdued);
-        margin-top: 0;
-        margin-bottom: 1.6rem;
-    }
+        a {
+            color: var(--fg-color);
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: var(--fg-subdued);
+            cursor: pointer;
+        }
+
+        blockquote {
+            color: var(--fg-subdued);
+            border-radius: 2px;
+            border-left: 4px solid var(--fg-subdued);
+            margin-left: 1rem;
+            margin-right: 1rem;
+            padding-left: 0.4rem;
+        }
+
+        pre {
+            font-size: 0.6rem;
+            padding: 0.4rem;
+            border-radius: 5px;;
+        }
+
+        pre::-webkit-scrollbar {
+            display: none;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            margin: 0.2rem;
+        }
+
+        h2 {
+            font-size: 0.9rem;
+            margin: 0.25rem;
+            margin-bottom: 0.1rem;
+        }
+
+        hr {
+            fill: var(--fg-subdued);
+            margin-top: 0;
+            margin-bottom: 1.6rem;
+        }
+
+        .footnotes {
+            ol {
+                margin-top: 1rem;
+                margin-bottom: 0;
+            }
+
+            li {
+                color: var(--fg-subdued);
+                font-size: 0.4rem;
+            }
+            p {
+                font-size: 0.4rem;
+                margin-bottom: 0px;
+                line-height: 1.74;
+            }
+        }
+
   }
 </style>
