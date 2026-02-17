@@ -37,79 +37,39 @@ import Layout from '../layouts/Layout.astro';
                 </tr>
             </table>
         </section>
-
-        <!-- SKILLS -->
-        <section class="category skills">
-            <h2>Skills</h2>
+        <!-- CONTRIBUTIONS -->
+        <section class="category contributions">
+            <h2>Open Source Contributions</h2>
             <hr />
-            <div>
-                <h3>Programming Languages</h3>
-                <ul>
-                    <li>
-                        <h4><em>Rust</em></h4>
-                        <blockquote>
-                            Moderate contributions
-                            to large Rust projects, including crates relied on by the Rust compiler.
-                            I have used Rust for backend web development, zero copy parsing, and systems programming,
-                            and maintain several actively used Rust projects that I helped start.
-                        </blockquote>
-                    </li>
-                    <li>
-                        <h4><em>Typescript | Javascript</em></h4>
-                        <blockquote>
-                            Used Typescript for large backend and frontend projects. I can write secure,
-                            idiomatic, maintainable, and performant Typescript code.
-                            My Typescript experience also includes framework experience with Svelte, and Astro. 
-                        </blockquote>
-                    </li>
-                    <li>
-                        <h4><em>Other</em></h4>
-                        <blockquote>
-                            Comfortable writing Python, C/C++, C#, and Java.
-                            I am committed to continually adapting and growing, and would
-                            love the opportunity to learn and grow with new langauges.
-                        </blockquote>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3>DevOps | Tooling</h3>
-                <ul>
-                    <li>
-                        <h4><em>Git</em></h4>
-                        <blockquote>
-                            Experience using Git for projects of all sizes.
-                            I have practice with conventional commits, and am
-                            comfortable working with version control for large projects.
-                        </blockquote>
-                    </li>
-                    <li>
-                        <h4><em>CI|CD</em></h4>
-                        <blockquote>
-                            Created Github Actions that provide linting and automatic deployment
-                            of a variety of projects. Experience utilizing caching and
-                            dynamic workflows to reduce CI times. 
-                        </blockquote>
-                    <li>
-                        <h4><em>Containerization</em></h4>
-                        <blockquote>
-                            Experience developing and deploying projects with Docker/Docker Compose. My homelab
-                            is built on top of Docker and Hashicorp Nomad.
-                        </blockquote>
-                    </li>
-                    <li>
-                        <h4><em>Linux</em></h4>
-                        <blockquote>
-                            Completed <a href="https://www.linuxfromscratch.org/" target="_blank">Linux From Scratch</a>. Experience with
-                            XCP-NG/Xen Orchestra, coreutils, and systemd. I am comfortable deploying, administering, and securing
-                            a Linux system.
-                        </blockquote>
-                    </li>
-                    
-                </ul>
-            </div>
-        </section>
+            <ul>
+                <li>
+                    <h3><a>zstd-rs - foundational work</a></h3>
+                    <blockquote>
+                        Contributed core compressor infrastructure and dictionary generation to zstd-rs, the only pure Rust implementation of the Zstandard compression algorithm.
+                        Auxiliary work included adding unit tests,
+                        fuzzing, and integration testing. The dictionary generation code contributed
+                        and benchmarked within 0.5%
+                        of Facebook's. Other noteworthy contributions include significant codebase refactoring and documentation improvements.
+                    </blockquote>
+                </li>
+                <li>
+                    <h3><a>Axum - multipart forms</a></h3>
+                    <blockquote>
+                        Axum is the largest web framework in the Rust ecosystem, and is 
+                        relied on by <a href="https://azure.microsoft.com/en-us/products/machine-learning">Azure ML</a>, <a href="https://reddit.com">reddit.com</a>, and more.
+                        Implemented HTTP multipart form support from scratch via test driven development and upstreamed my
+                        changes into the core Axum framework. The work involved reading the associated portions of the HTTP specification,
+                        defining tests to verify behavior, then implementing an API in a style consistent
+                        with the rest of the codebase.
+                    </blockquote>
+                </li>
+            </ul>
+                    <blockquote>
+                        More contributions can be found on my
+                        <a href="https://github.com/zleyyij">Github profile</a>.
+                    </blockquote>
 
+        </section>
         <!-- PROJECTS -->
         <section class="category">
             <h2>Founded Projects</h2>
@@ -138,9 +98,9 @@ import Layout from '../layouts/Layout.astro';
                     <h3><a href="https://github.com/spec-ify/hwapi">HWAPI</a> - Hardware Database</h3>
                     <blockquote>
                         This project was developed to add functionality to Specify.
-                        It is composed of zero-copy Pratt parsers, a caching layer,
-                        and a public API.
-                        It helped me understand the process of developing parsers,
+                        It is composed of zero-copy Pratt parsers built using `nom`, a caching layer,
+                        and a public HTTP API. 
+                        It helped me understand the process of developing parsers, 
                         and demonstrates my understanding of the telemetry ecosystem.
                         In HWAPI I integrated OpenTelemetry tracing support and
                         deployed and configured a telemetry stack composed of Grafana,
@@ -149,42 +109,67 @@ import Layout from '../layouts/Layout.astro';
                 </li>
             </ul>
 
-        </section>
-        <!-- CONTRIBUTIONS -->
-        <section class="category contributions">
-            <h2>Open Source Contributions</h2>
-            <hr />
-            <ul>
-                <li>
-                    <h3><a>zstd-rs - foundational work</a></h3>
-                    <blockquote>
-                        zstd-rs is the only pure Rust implementation of the zstandard compression algorithm.
-                        I wrote the core infrastructure for the compressor, as well as unit tests,
-                        fuzzing, and integration testing for the compressor. I also added
-                        support for dictionary generation, and my implementation benchmarked within 0.5%
-                        of Facebook's. Other noteworthy contributions include significant codebase refactoring and documentation improvements.
-                    </blockquote>
-                </li>
-                <li>
-                    <h3><a>Axum - multipart forms</a></h3>
-                    <blockquote>
-                        Axum is the largest web framework in the Rust ecosystem, and is 
-                        relied on by <a href="https://azure.microsoft.com/en-us/products/machine-learning">Azure ML</a>, <a href="https://crates.io">crates.io</a>, <a href="https://reddit.com">reddit.com</a>, <a href="https://lichess.org">lichess</a>, and more.
-                        I added multipart form integration to Axum. Doing so involved
-                        using test driven development to implement a portion of the HTTP specification from scratch
-                        in a reliable and performant manner. My PR was held to stringent standards and I gained valuable feedback
-                        from project maintainers.
-                    </blockquote>
-                </li>
-                <li>
-                    <h3><br></h3>
-                    <blockquote>
-                        More contributions can be found on my
-                        <a href="https://github.com/zleyyij">Github profile</a>.
-                    </blockquote>
-                </li>
-            </ul>
 
+        </section>
+        <!-- SKILLS -->
+        <section class="category skills">
+            <h2>Skills</h2>
+            <hr />
+            <div>
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>
+                        <h4><em>Rust</em></h4>
+                        <blockquote>
+                            Experience with Rust for backend web development, zero copy parsing, and systems programming.
+                        </blockquote>
+                    </li>
+                    <li>
+                        <h4><em>Typescript | Javascript</em></h4>
+                        <blockquote>
+                            Used Typescript medium to large backend and frontend projects.
+                            Framework experience with Svelte, and Astro. 
+                        </blockquote>
+                    </li>
+                    <li>
+                        <h4><em>Other</em></h4>
+                        <blockquote>
+                            Comfortable writing Python, C/C++, C#, and Java,
+                            but prepared to learn and grow with new languages.
+                        </blockquote>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3>DevOps | Tooling</h3>
+                <ul>
+                    <li>
+                        <h4><em>Git</em></h4>
+                        <blockquote>
+                            Comfortable with Git, conventional commits, and internal implementation details.
+                        </blockquote>
+                    </li>
+                    <li>
+                        <h4><em>CI|CD</em></h4>
+                        <blockquote>
+                            Created Github Actions that fulfill CI needs for a variety of projects. Utilized caching and
+                            dynamic workflows to reduce CI times by upwards of 50%.
+                        </blockquote>
+                    <li>
+                        <h4><em>Containerization</em></h4>
+                        <blockquote>
+                            Developed and deployed projects with Docker/Compose and Hashicorp Nomad.
+                        </blockquote>
+                    </li>
+                    <li>
+                        <h4><em>Linux</em></h4>
+                        <blockquote>
+                            Completed <a href="https://www.linuxfromscratch.org/" target="_blank">Linux From Scratch</a>. Comfortable deploying and administering a Linux system.
+                        </blockquote>
+                    </li>
+                    
+                </ul>
+            </div>
         </section>
 
         <!-- EDUCATION -->
@@ -197,10 +182,9 @@ import Layout from '../layouts/Layout.astro';
                     <h4>Computer Engineering Bachelors - With Honors<br>
                         Fall 2024 - Spring 2029 (estimated)
                     </h4>
-                    <p>I am attending USU full time working towards a bachelors in Computer Engineering, with a
-                        double minor in American Sign Language and Math. I entered
-                        USU with over 25 concurrent enrollment credits, and maintain above a 3.8GPA. I am currently
-                        enrolled in the USU Honors Program and have pursued undergraduate research.
+                    <p> Attending USU full time working towards a bachelors in Computer Engineering, with a
+                        double minor in American Sign Language and Math, maintaining above a 3.8 GPA. Currently
+                        enrolled in the USU Honors Program and pursuing undergraduate research.
                     </p>
                 </li>
                 <li>
@@ -209,9 +193,8 @@ import Layout from '../layouts/Layout.astro';
                         Fall 2020 - Spring 2024
                     </h4>
                     <p>
-                        I graduated from BTECH's Information Technology program with a 4.0 GPA, and
-                        won or placed top 3 in every hackathon they hosted. In attending this program,
-                        I developed my knowledge of hardware, software, networking, and cybersecurity.
+                        Graduated from BTECH's Information Technology program with a 4.0 GPA, and
+                        won or placed in every hackathon hosted during my time there.
                     </p>
                 </li>
                 <li>
@@ -219,9 +202,7 @@ import Layout from '../layouts/Layout.astro';
                     <h4>Fall 2020 - Spring 2024
                     </h4>
                     <p>
-                        I graduated from Ridgeline High School in the summer of 2024 with a 3.9+ GPA.
-                        At Ridgeline I took the opportunity to take multiple AP and concurrent enrollment courses, passing
-                        all college level courses with highest possible grade.
+                        Graduated from Ridgeline High School in the summer of 2024 with a 3.9+ GPA.
                     </p>
                 </li>
             </ul>
@@ -237,11 +218,10 @@ import Layout from '../layouts/Layout.astro';
                     <h3><strong>Innovation Hub Lab Manager</strong> — <em>Utah State University</em></h3>
                     <h4>July 2024 - Current</h4>
                     <p>
-                        I started at USU as a computer lab consultant before rapidly being promoted to Innovation Hub Manager.
+                        Started at USU as a computer lab consultant before being promoted to Innovation Hub Manager.
                         Working as a lab manager involves ensuring reliable operation of technology and facilities.
-                        The Innovation Hub contains a wide variety of technology, from VR headsets to 3D printers, and I have
-                        increased 3D printer reliability, and made bleeding edge technology accessible to
-                        the students and faculty at USU. Other responsibilities included
+                        Improved service reliability, and made bleeding edge technology accessible to
+                        students and faculty. Other responsibilities included
                         customer service, giving tours, and guiding the future of the Innovation Hub.
                         Working here has enabled me to adapt more easily to new challenges and environments.
                     </p>
@@ -250,10 +230,9 @@ import Layout from '../layouts/Layout.astro';
                     <h3><strong>Bicycle Assembly</strong> — <em>Al's Sporting Goods</em></h3>
                     <h4>June 2021 - August 2023</h4>
                     <p>
-                        Performed multiple duties, including customer facing positions, while
-                        also performing various technical duties including assembly and quality control for bikes
-                        and other sporting equipment.I learned how to communicate effectively with my teammates
-                        and work under a deadline
+                        Performed various technical duties including assembly and quality control for bikes
+                        and other sporting equipment. Learned how to communicate effectively with my teammates,
+                        maintain consistently high quality work, and complete that work under a deadline.
                     </p>
                 </li>
             </ul>
